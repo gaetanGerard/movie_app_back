@@ -1,0 +1,45 @@
+const movies = require('./movies.js');
+const others = require('./others.js');
+const search = require('./search.js');
+const tv = require('./tv.js');
+
+exports.resolvers = {
+  Query: {
+    popularMovies: movies.popMovies,
+    nowPlayingMovies: movies.nowPlayMovies,
+    topRatedMovies: movies.topRatedMovies,
+    latestMovies: movies.latestMovies,
+    upcomingMovies: movies.upComingMovies,
+    similarMovies: movies.similarMovies,
+    recommendationMovies: movies.recommendationMovies,
+    moviesDetail: movies.moviesDetail,
+    collectionDetail: movies.collectionDetails,
+    credit: movies.moviesCredit,
+    discoverMovie: movies.discoverMovie,
+    genre: others.genre,
+    certificationsMovies: others.certificationsMovies,
+    certificationsSeries: others.certificationsSeries,
+    companies: others.companies,
+    networks: others.networks,
+    trending: others.trendings,
+    people: others.people,
+    peopleMovieCredit: others.peopleMovieCredit,
+    peopleSerieCredit: others.peopleSerieCredit,
+    searchCompanies: search.searchCompanies,
+    searchCollections: search.searchCollections,
+    searchMovies: search.searchMovies,
+    searchTv: search.searchTv,
+    searchPeople: search.searchPeople,
+    discoverTv: tv.discoverTv,
+    tvDetail: tv.tvDetail,
+    tvRecommendation: tv.tvRecommendation,
+    tvSimilar: tv.tvSimilar,
+    tvLatest: tv.tvLatest,
+    tvAiringToday: tv.tvAiringToday,
+    tvOnTheAir: tv.tvOnTheAir,
+    tvPopular: tv.tvPopular,
+    tvTopRated: tv.tvTopRated,
+    tvSeasonsDetail: tv.tvSeasonsDetail,
+    tvEpisodesDetail: tv.tvEpisodesDetail,
+  },
+};
